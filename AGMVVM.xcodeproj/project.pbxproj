@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		F81FB38F26B984D100577897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB38E26B984D100577897 /* AppDelegate.swift */; };
 		F81FB39126B984D100577897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB39026B984D100577897 /* SceneDelegate.swift */; };
-		F81FB39326B984D100577897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB39226B984D100577897 /* ViewController.swift */; };
-		F81FB39626B984D100577897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81FB39426B984D100577897 /* Main.storyboard */; };
 		F81FB39826B984D600577897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81FB39726B984D600577897 /* Assets.xcassets */; };
 		F81FB39B26B984D600577897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81FB39926B984D600577897 /* LaunchScreen.storyboard */; };
 		F81FB3A626B984D700577897 /* AGMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3A526B984D700577897 /* AGMVVMTests.swift */; };
 		F81FB3B126B984D700577897 /* AGMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3B026B984D700577897 /* AGMVVMUITests.swift */; };
+		F81FB3CD26B98F0900577897 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3CB26B98F0900577897 /* HomeVC.swift */; };
+		F81FB3CE26B98F0900577897 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F81FB3CC26B98F0900577897 /* HomeVC.xib */; };
+		F81FB3D026B98F3600577897 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3CF26B98F3600577897 /* HomeModel.swift */; };
+		F81FB3D326B98FAB00577897 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3D226B98FAB00577897 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		F81FB38B26B984D100577897 /* AGMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81FB38E26B984D100577897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F81FB39026B984D100577897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F81FB39226B984D100577897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F81FB39526B984D100577897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F81FB39726B984D600577897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81FB39A26B984D600577897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F81FB39C26B984D600577897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,10 @@
 		F81FB3AC26B984D700577897 /* AGMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81FB3B026B984D700577897 /* AGMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGMVVMUITests.swift; sourceTree = "<group>"; };
 		F81FB3B226B984D700577897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F81FB3CB26B98F0900577897 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F81FB3CC26B98F0900577897 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		F81FB3CF26B98F3600577897 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		F81FB3D226B98FAB00577897 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,11 @@
 		F81FB38D26B984D100577897 /* AGMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				F81FB38E26B984D100577897 /* AppDelegate.swift */,
-				F81FB39026B984D100577897 /* SceneDelegate.swift */,
-				F81FB39226B984D100577897 /* ViewController.swift */,
-				F81FB39426B984D100577897 /* Main.storyboard */,
-				F81FB39726B984D600577897 /* Assets.xcassets */,
-				F81FB39926B984D600577897 /* LaunchScreen.storyboard */,
-				F81FB39C26B984D600577897 /* Info.plist */,
+				F81FB3BF26B985BD00577897 /* Core */,
+				F81FB3BE26B985B000577897 /* Configration */,
+				F81FB3C026B985DC00577897 /* Resourcess */,
+				F81FB3C226B985FE00577897 /* Scenes */,
+				F81FB3C126B985ED00577897 /* Storyboard */,
 			);
 			path = AGMVVM;
 			sourceTree = "<group>";
@@ -126,6 +128,82 @@
 				F81FB3B226B984D700577897 /* Info.plist */,
 			);
 			path = AGMVVMUITests;
+			sourceTree = "<group>";
+		};
+		F81FB3BE26B985B000577897 /* Configration */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB39C26B984D600577897 /* Info.plist */,
+			);
+			path = Configration;
+			sourceTree = "<group>";
+		};
+		F81FB3BF26B985BD00577897 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB38E26B984D100577897 /* AppDelegate.swift */,
+				F81FB39026B984D100577897 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F81FB3C026B985DC00577897 /* Resourcess */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB39726B984D600577897 /* Assets.xcassets */,
+			);
+			path = Resourcess;
+			sourceTree = "<group>";
+		};
+		F81FB3C126B985ED00577897 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB39926B984D600577897 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F81FB3C226B985FE00577897 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB3C326B98AD000577897 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F81FB3C326B98AD000577897 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB3CA26B98ECA00577897 /* Model */,
+				F81FB3C926B98EBB00577897 /* ViewModel */,
+				F81FB3C826B98EA900577897 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F81FB3C826B98EA900577897 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB3CB26B98F0900577897 /* HomeVC.swift */,
+				F81FB3CC26B98F0900577897 /* HomeVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F81FB3C926B98EBB00577897 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB3D226B98FAB00577897 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F81FB3CA26B98ECA00577897 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F81FB3CF26B98F3600577897 /* HomeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +270,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "ahmed gado";
 				TargetAttributes = {
 					F81FB38A26B984D100577897 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -232,8 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81FB39B26B984D600577897 /* LaunchScreen.storyboard in Resources */,
+				F81FB3CE26B98F0900577897 /* HomeVC.xib in Resources */,
 				F81FB39826B984D600577897 /* Assets.xcassets in Resources */,
-				F81FB39626B984D100577897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81FB39326B984D100577897 /* ViewController.swift in Sources */,
+				F81FB3D026B98F3600577897 /* HomeModel.swift in Sources */,
+				F81FB3CD26B98F0900577897 /* HomeVC.swift in Sources */,
 				F81FB38F26B984D100577897 /* AppDelegate.swift in Sources */,
+				F81FB3D326B98FAB00577897 /* HomeViewModel.swift in Sources */,
 				F81FB39126B984D100577897 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F81FB39426B984D100577897 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F81FB39526B984D100577897 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F81FB39926B984D600577897 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AGUFK3463H;
-				INFOPLIST_FILE = AGMVVM/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AGMVVM/Configration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AGUFK3463H;
-				INFOPLIST_FILE = AGMVVM/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AGMVVM/Configration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
