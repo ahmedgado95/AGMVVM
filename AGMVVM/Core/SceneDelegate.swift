@@ -4,7 +4,6 @@
 //
 //  Created by ahmed gado on 03/08/2021.
 //
-//http://dummy.restapiexample.com/api/v1/employees
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
