@@ -10,5 +10,5 @@ import Foundation
 // Default response to check for every request since this's how this api works.
 struct DefaultResponse: Codable, CodableInit , LocalizedError {
     var status : String
-    var msg : String?
+    var message : String?
 }

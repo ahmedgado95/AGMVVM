@@ -28,6 +28,11 @@
 		F81FB3E526B992F500577897 /* UploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3E426B992F500577897 /* UploadData.swift */; };
 		F81FB3E726B9931200577897 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3E626B9931200577897 /* APIRequestHandler.swift */; };
 		F81FB3EB26B993BA00577897 /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FB3EA26B993BA00577897 /* ApiUrl.swift */; };
+		F827A99826BA7BB500380E07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827A99726BA7BB500380E07 /* MainViewController.swift */; };
+		F827A99F26BA7F3100380E07 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827A99E26BA7F3100380E07 /* NetworkManager.swift */; };
+		F827A9A326BA89C700380E07 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827A9A126BA89C700380E07 /* HomeTableCell.swift */; };
+		F827A9A426BA89C700380E07 /* HomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F827A9A226BA89C700380E07 /* HomeTableCell.xib */; };
+		F827A9A826BA8D2500380E07 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827A9A726BA8D2500380E07 /* TableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		F81FB3E426B992F500577897 /* UploadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadData.swift; sourceTree = "<group>"; };
 		F81FB3E626B9931200577897 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
 		F81FB3EA26B993BA00577897 /* ApiUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrl.swift; sourceTree = "<group>"; };
+		F827A99726BA7BB500380E07 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F827A99E26BA7F3100380E07 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F827A9A126BA89C700380E07 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		F827A9A226BA89C700380E07 /* HomeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableCell.xib; sourceTree = "<group>"; };
+		F827A9A726BA8D2500380E07 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +172,7 @@
 				F81FB3BF26B985BD00577897 /* Core */,
 				F81FB3BE26B985B000577897 /* Configration */,
 				F81FB3C026B985DC00577897 /* Resourcess */,
+				F827A9A526BA8CDD00380E07 /* Extension */,
 				F81FB3E926B9938900577897 /* Api */,
 				F81FB3D426B9916000577897 /* Network */,
 				F81FB3C226B985FE00577897 /* Scenes */,
@@ -242,6 +253,7 @@
 		F81FB3C826B98EA900577897 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F827A9A026BA899F00380E07 /* Cell */,
 				F81FB3CB26B98F0900577897 /* HomeVC.swift */,
 				F81FB3CC26B98F0900577897 /* HomeVC.xib */,
 			);
@@ -267,6 +279,7 @@
 		F81FB3D426B9916000577897 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F827A99D26BA7F0600380E07 /* Network Manger */,
 				F81FB3D726B991D800577897 /* RequestHandler */,
 				F81FB3D626B991CE00577897 /* Requests */,
 				F81FB3D526B991B500577897 /* response */,
@@ -308,6 +321,48 @@
 				F81FB3EA26B993BA00577897 /* ApiUrl.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		F827A99626BA7B9D00380E07 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F827A99726BA7BB500380E07 /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F827A99D26BA7F0600380E07 /* Network Manger */ = {
+			isa = PBXGroup;
+			children = (
+				F827A99E26BA7F3100380E07 /* NetworkManager.swift */,
+			);
+			path = "Network Manger";
+			sourceTree = "<group>";
+		};
+		F827A9A026BA899F00380E07 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F827A9A126BA89C700380E07 /* HomeTableCell.swift */,
+				F827A9A226BA89C700380E07 /* HomeTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F827A9A526BA8CDD00380E07 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F827A9A626BA8CF200380E07 /* TableView */,
+				F827A99626BA7B9D00380E07 /* MainScreen */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F827A9A626BA8CF200380E07 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F827A9A726BA8D2500380E07 /* TableView+Extension.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +477,7 @@
 				F81FB39B26B984D600577897 /* LaunchScreen.storyboard in Resources */,
 				F81FB3CE26B98F0900577897 /* HomeVC.xib in Resources */,
 				F81FB39826B984D600577897 /* Assets.xcassets in Resources */,
+				F827A9A426BA89C700380E07 /* HomeTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,12 +612,16 @@
 				F81FB3E126B9924A00577897 /* ResponseHandler.swift in Sources */,
 				F81FB3D926B991EE00577897 /* CodableInit.swift in Sources */,
 				F81FB3E526B992F500577897 /* UploadData.swift in Sources */,
+				F827A99826BA7BB500380E07 /* MainViewController.swift in Sources */,
+				F827A99F26BA7F3100380E07 /* NetworkManager.swift in Sources */,
 				F81FB38F26B984D100577897 /* AppDelegate.swift in Sources */,
 				F81FB3DF26B9923200577897 /* DefaultResponse.swift in Sources */,
 				F81FB3D326B98FAB00577897 /* HomeViewModel.swift in Sources */,
 				F81FB39126B984D100577897 /* SceneDelegate.swift in Sources */,
 				F81FB3DC26B9921000577897 /* APIError.swift in Sources */,
 				F81FB3E726B9931200577897 /* APIRequestHandler.swift in Sources */,
+				F827A9A326BA89C700380E07 /* HomeTableCell.swift in Sources */,
+				F827A9A826BA8D2500380E07 /* TableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

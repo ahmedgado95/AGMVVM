@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - HomeModel
-struct HomeModel: Codable {
+struct HomeModel: Codable , CodableInit{
     let status: String
     let data: [HomeItem]
     let message: String

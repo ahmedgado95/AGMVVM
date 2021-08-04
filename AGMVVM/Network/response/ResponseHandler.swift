@@ -29,7 +29,7 @@ extension HandleAlamoResponse {
             case 400..<500:
                 do {
                     let messageError = try DefaultResponse(data: data)
-                    completion?(.failure(APIError.errorMessage(message: messageError.msg ?? "")))
+                    completion?(.failure(APIError.errorMessage(message: messageError.message ?? "")))
                 } catch {
                     completion?(.failure(error))
                 }
@@ -40,14 +40,11 @@ extension HandleAlamoResponse {
         case .success(let value):
             do {
                 let defaultResponse = try DefaultResponse(data: value)
-                if defaultResponse.status == "1" {
+                if defaultResponse.status == "success" {
                     let modules = try T(data: value)
                     completion?(.success(modules))
-                } else if defaultResponse.status == "2" {
-                        let modules = try T(data: value)
-                        completion?(.success(modules))
                 }else {
-                    completion?(.failure(APIError.errorMessage(message: defaultResponse.msg ?? "")))
+                    completion?(.failure(APIError.errorMessage(message: defaultResponse.message ?? "")))
                 }
             } catch let jsonError {
                 print("Status Code is: \(response.response?.statusCode ?? 000000) \(jsonError)")
