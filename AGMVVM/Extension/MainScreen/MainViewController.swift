@@ -8,7 +8,6 @@
 
 import UIKit
 import NVActivityIndicatorView
-var centerOfScreenPoint : CGPoint?
 protocol MainViewProtcool  : AnyObject {
     func showLoading()
     func hideLoading()
@@ -18,13 +17,9 @@ class MainViewController: UIViewController {
   
     var  loading : NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect.init(x: 0, y: 0, width: 70, height: 70), type: .ballRotateChase, color: UIColor.black, padding: 2)
     
-    @IBOutlet weak var  activityView : NVActivityIndicatorView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        if centerOfScreenPoint == nil {
-            centerOfScreenPoint = self.view.center
-        }
-        loading.center = centerOfScreenPoint ?? self.view.center
+        loading.center = view.center
         view.addSubview(loading)
     }
     

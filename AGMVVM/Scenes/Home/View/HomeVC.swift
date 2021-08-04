@@ -27,7 +27,8 @@ class HomeVC: MainViewController {
         tableView.registerCellNib(cellClass: HomeTableCell.self)
     }
     func setupViewModel(){
-        viewModel.reloadData = {
+        viewModel.reloadData = { [weak self]  in
+            guard let self = self else { return }
             self.tableView.reloadData()
         }
     }

@@ -32,6 +32,7 @@ extension HandleAlamoResponse {
                     completion?(.failure(APIError.errorMessage(message: messageError.message ?? "")))
                 } catch {
                     completion?(.failure(error))
+                    // server error
                 }
             default:
                 completion?(.failure(error))
