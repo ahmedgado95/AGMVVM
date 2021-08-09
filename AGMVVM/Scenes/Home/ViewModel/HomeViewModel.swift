@@ -11,7 +11,7 @@ import Foundation
 class HomeViewModel  {
     var reloadData : (()->())?
 
-    private  weak var view : MainViewProtcool?
+    private  weak var delegate : MainViewProtcool?
     private var homeSource : [HomeItem] = [] {
         didSet{
             self.reloadData?()
@@ -19,16 +19,16 @@ class HomeViewModel  {
     }
   
 
-    init(view : MainViewProtcool) {
-        self.view = view
+    init(delegate : MainViewProtcool) {
+        self.delegate = delegate
         getData()
     }
     
     func getData (){
-        view?.showLoading()
+        delegate?.showLoading()
         NetworkManager.gethomeDetails.send(HomeModel.self){ [weak self](response) in
             guard let self = self else{return}
-            self.view?.hideLoading()
+            self.delegate?.hideLoading()
             switch response{
             case .success(let value):
                 self.homeSource = value.data
@@ -41,7 +41,7 @@ class HomeViewModel  {
                     return
                 }
                 // BackEnd Error
-                self.view?.showError(error: errorMessage.localizedDescription)
+                self.delegate?.showError(error: errorMessage.localizedDescription)
                 
             }
         }

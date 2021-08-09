@@ -15,7 +15,7 @@ protocol MainViewProtcool  : AnyObject {
 }
 class MainViewController: UIViewController {
   
-    var  loading : NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect.init(x: 0, y: 0, width: 70, height: 70), type: .ballRotateChase, color: UIColor.black, padding: 2)
+    var  loading : NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect.init(x: 0, y: 0, width: 70, height: 70), type: .ballBeat, color: UIColor.black, padding: 2)
     
     override func viewDidLoad() {
         super.viewDidLoad()
