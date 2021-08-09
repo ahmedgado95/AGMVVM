@@ -10,7 +10,6 @@ import Foundation
 
 class HomeViewModel  {
     var reloadData : (()->())?
-
     private  weak var delegate : MainViewProtcool?
     private var homeSource : [HomeItem] = [] {
         didSet{

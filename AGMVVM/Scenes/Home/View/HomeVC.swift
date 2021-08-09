@@ -14,7 +14,7 @@ class HomeVC: MainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = HomeViewModel(view: self)
+        viewModel = HomeViewModel(delegate: self)
 
         setupTableView()
         setupViewModel()
