@@ -7,19 +7,19 @@
 //
 
 import Foundation
-
+protocol ReloadDataProtcool: AnyObject {
+    func reloadData()
+}
 class HomeViewModel  {
-    var reloadData : (()->())?
     private  weak var delegate : MainViewProtcool?
-    private var homeSource : [HomeItem] = [] {
-        didSet{
-            self.reloadData?()
-        }
-    }
+    private weak var view : ReloadDataProtcool?
+
+    private var homeSource : [HomeItem] = []
   
 
-    init(delegate : MainViewProtcool) {
+    init(delegate : MainViewProtcool , view : ReloadDataProtcool) {
         self.delegate = delegate
+        self.view = view
         getData()
     }
     
@@ -31,7 +31,7 @@ class HomeViewModel  {
             switch response{
             case .success(let value):
                 self.homeSource = value.data
-                
+                self.view?.reloadData()
             case .failure(let error):
                 
                 guard let errorMessage = error as? APIError else {

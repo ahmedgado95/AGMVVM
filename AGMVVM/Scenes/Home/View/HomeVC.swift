@@ -9,15 +9,15 @@
 import UIKit
 
 class HomeVC: MainViewController {
+
     @IBOutlet weak var tableView: UITableView!
     var viewModel : HomeViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = HomeViewModel(delegate: self)
+        viewModel = HomeViewModel(delegate: self, view: self)
 
         setupTableView()
-        setupViewModel()
         // Do any additional setup after loading the view.
     }
 
@@ -26,13 +26,7 @@ class HomeVC: MainViewController {
         tableView.delegate = self
         tableView.registerCellNib(cellClass: HomeTableCell.self)
     }
-    func setupViewModel(){
-        viewModel.reloadData = { [weak self]  in
-            guard let self = self else { return }
-            self.tableView.reloadData()
-        }
-    }
-
+ 
   
 }
 
@@ -53,4 +47,9 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         viewModel.didSelectRow(index: indexPath.row)
     }
     
+}
+extension HomeVC : ReloadDataProtcool {
+    func reloadData() {
+        tableView.reloadData()
+    }
 }
